@@ -1,6 +1,6 @@
 project:
   type: book
-  output_directory: docs
+  output-dir: docs
 
 book:
   title: "Ecosystemic Value Co-creation"
