@@ -1,0 +1,25 @@
+# Experimental Design
+
+The experiment crosses scenarios, objective functions, stakeholder MIG-reasoning modes, and MIG-setup modes. Fixed/historical, probabilistic, agent, and selected hybrid reasoners form one factor. Independent, prenegotiated smart-contract, and adaptive cooperative PUDAL setup form a second factor and correspond to baseline, SOTA, and TISE respectively. This factorial separation reveals whether an improvement comes from richer stakeholder reasoning, from fixed contractual coordination, or from adaptive Triune Intelligence. Because the three ecosystem models make progressively stronger claims, evaluation follows a staged validation logic.
+
+## Validation Questions
+
+**VQ1—Baseline existence and coherence.** Do user, source, regulator, and operator stakeholders execute their missions through valid MIGs, balanced VOMR accounts, and observable wealth creation without centralized coordination?
+
+**VQ2—SOTA engineered coordination.** Does the PSKVE Exchange Engine operate correctly under a prenegotiated smart contract encoding a fixed PUDAL-derived policy, and do different fixed objective functions improve value or wealth creation relative to the baseline?
+
+**VQ3—TISE adaptive value creation.** Under normal conditions, does the Triune-Intelligence-driven PUDAL Engine equal or exceed the best fixed SOTA policy in mission achievement and value or wealth creation?
+
+**VQ4—TISE resilience.** Under disruptive scenarios, does TISE retain more mission performance, incur less cumulative loss, recover faster, or reconfigure more effectively than baseline and fixed-policy SOTA models?
+
+The baseline must pass VQ1 before comparative claims are interpreted. SOTA must pass functional PSKVE and fixed-control checks before improvements are attributed to coordination. TISE is supported only if it performs competitively under normal conditions and demonstrates a measurable resilience advantage under disruption.
+
+![Figure 9. Experimental matrix crossing models, policies, scenarios, and metrics.](/figures/generated/f_09.png){#fig-expdesign}
+
+{{< include /tables/table12_scenarios.qmd >}}
+
+{{< include /tables/table15_experimental_matrix.qmd >}}
+
+{{< include /tables/table16_parameters.qmd >}}
+
+{{< include /tables/table17_metrics.qmd >}}

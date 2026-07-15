@@ -1,0 +1,15 @@
+# Problem Statement
+
+The core problem is to design an ecosystem controller that can recommend coordinated actions to heterogeneous stakeholders without reducing the ecosystem to a single firm's profit function or a single consumer's preference function. The controller must align physical transformation, mission timing, and financial viability while respecting stakeholder autonomy and operating constraints.
+
+Let stakeholders be indexed by $i \in \mathcal{I}$. Each stakeholder maintains VOMR accounts: Value $V_i(t)$, Output $O_i(t)$, Mission $M_i(t)$, and Resources $R_i(t)$. VOMR is the reporting and accounting view; the underlying causal cycle proceeds from resources through mission execution to outputs and realized value, $R \rightarrow M \rightarrow O \rightarrow V$. Stakeholders may create MIG proposals using historical, probabilistic, agent, or hybrid reasoning. The baseline commits these MIGs independently, SOTA coordinates them through a prenegotiated smart contract, and TISE coordinates them adaptively and cooperatively through a PUDAL-controlled MSRS informed by Human/Natural, Crowd/Cultural/Collective, and Artificial Intelligence.
+
+The design objective is to maximize an Ecosystem Value Index:
+
+$$
+EVI(t) = \sum_k w_k z_k(t)
+$$
+
+where $z_k(t)$ are normalized metrics such as mission achievement, sustainability, satisfaction, profitability, waste reduction, and resilience.
+
+The optimization is constrained by resource balances, mission-asset capacity, environmental feasibility, liquidity, and stakeholder participation. Consequently, a high EVI is meaningful only when the recommended configuration is operationally and financially feasible.

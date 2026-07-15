@@ -1,0 +1,18 @@
+```{r}
+#| label: tbl-generalization
+#| tbl-cap: "MOEE mapping across public-need application domains"
+#| tbl.env: tabular
+#| fig-pos: h
+#| echo: false
+
+options(knitr.table.format = function() {
+  if (knitr::is_latex_output()) "latex" else "pandoc"
+})
+
+csv_candidates <- c("tables/table_22_generalization_across_domains.csv", "../tables/table_22_generalization_across_domains.csv", "table_22_generalization_across_domains.csv")
+csv_file <- csv_candidates[file.exists(csv_candidates)][1]
+if (is.na(csv_file)) stop("Cannot find table_22_generalization_across_domains.csv")
+dt <- read.csv(csv_file, check.names = FALSE, encoding = "UTF-8")
+
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

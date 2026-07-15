@@ -1,0 +1,17 @@
+# Digital Twin Mini-Lab
+
+The Digital Twin Mini-Lab is the executable research instrument for evaluating ecosystem architectures. It simulates agents, the three markets, scenarios, recommendation policies, VOMR accounts, and performance metrics. The same scenario can therefore be executed under baseline, SOTA, and TISE coordination to isolate the effect of system architecture.
+
+## Python Reference Implementation
+
+The mathematical model is implemented as a reusable object-oriented Python package in `simulation/`. A `Stakeholder` owns mission assets, maintains VOMR accounts, and creates a proposed MIG through a pluggable `MIGReasoner`. Implementations include `HistoricalReasoner`, `ProbabilisticReasoner`, `AgentReasoner`, and `HybridReasoner`. A separate `MIGCoordinator` implements `IndependentCoordinator`, `SmartContractCoordinator`, or `AdaptivePUDALCoordinator`, keeping stakeholder reasoning distinct from ecosystem setup. `StockMarket`, `FinancialMarket`, and `ResourceOutputMarket` objects expose price and availability signals to the `PSKVEExchangeEngine`. A `TriuneIntelligence` object combines Human/Natural, Crowd/Cultural/Collective, and Artificial Intelligence signals for adaptive PUDAL coordination.
+
+Agent reasoning is provider-neutral. The `JSONAgentProvider` interface has adapters for a local Ollama chat service, the OpenAI Responses API, and the DeepSeek chat-completions API, plus fake and heuristic providers for reproducible offline testing. Credentials and model identifiers are supplied through environment variables rather than embedded in the model. Provider errors are explicit, with optional auditable heuristic fallback selected by the experiment configuration.
+
+At each simulation step, the engine (1) observes VOMR state and market signals, (2) asks each stakeholder reasoner to create a MIG proposal, (3) applies the selected setup operator—independent commitment, fixed smart-contract coordination, or adaptive cooperative PUDAL coordination—(4) validates the resulting MIGs against capacity, environmental, and financial constraints, (5) executes feasible exchanges through the PSKVE Exchange Engine, (6) settles transactions and updates VOMR accounts, and (7) records EVI and resilience metrics. Triune Intelligence is gathered when adaptive PUDAL coordination is active. This separation permits each reasoning mode to be compared under each setup mode without embedding coordination logic into stakeholder agents.
+
+![Figure 8. Layered architecture of the Digital Twin Mini-Lab.](/figures/generated/f_08.png){#fig-minilab}
+
+{{< include /tables/table11_modules.qmd >}}
+
+![Figure 20. Mission-Oriented Ecosystem Engineering lifecycle.](/figures/generated/f_20.png){#fig-lifecycle}

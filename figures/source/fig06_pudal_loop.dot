@@ -1,0 +1,9 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white"];
+  node [shape=box, color="black", fontname="Helvetica"];
+  edge [color="black"];
+  Perception -> Understanding -> Decision -> Action -> Ecosystem;
+  Ecosystem -> Perception [label="feedback"];
+  Ecosystem -> Learning;
+  Learning -> Understanding;
+}

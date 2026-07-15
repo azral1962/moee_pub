@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title description">
+  <title id="title">Figure under construction</title>
+  <desc id="description">Temporary placeholder for a figure that is still being prepared.</desc>
+  <defs>
+    <pattern id="stripes" width="32" height="32" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <rect width="16" height="32" fill="#20252b"/>
+      <rect x="16" width="16" height="32" fill="#f3b61f"/>
+    </pattern>
+  </defs>
+
+  <rect width="1200" height="675" fill="#f7f7f5"/>
+  <rect x="24" y="24" width="1152" height="627" rx="20" fill="#ffffff" stroke="#20252b" stroke-width="4"/>
+  <rect x="24" y="24" width="1152" height="28" rx="14" fill="url(#stripes)"/>
+  <rect x="24" y="623" width="1152" height="28" rx="14" fill="url(#stripes)"/>
+
+  <g transform="translate(600 250)" fill="none" stroke="#20252b" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-92 75 0-86 92 75Z" fill="#f3b61f" stroke-width="8"/>
+    <path d="M0-27V25" stroke-width="13"/>
+    <circle cy="50" r="7" fill="#20252b" stroke="none"/>
+  </g>
+
+  <text x="600" y="405" text-anchor="middle" fill="#20252b" font-family="Arial, Helvetica, sans-serif" font-size="54" font-weight="700" letter-spacing="3">UNDER CONSTRUCTION</text>
+  <text x="600" y="458" text-anchor="middle" fill="#5d6670" font-family="Arial, Helvetica, sans-serif" font-size="25">This figure is being prepared and will appear here soon.</text>
+  <line x1="375" y1="505" x2="825" y2="505" stroke="#c9cdd1" stroke-width="2"/>
+  <text x="600" y="548" text-anchor="middle" fill="#7b838b" font-family="Arial, Helvetica, sans-serif" font-size="19" letter-spacing="2">TEMPORARY PLACEHOLDER</text>
+</svg>

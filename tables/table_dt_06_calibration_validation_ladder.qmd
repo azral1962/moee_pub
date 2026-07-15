@@ -1,0 +1,8 @@
+```{r}
+#| label: tbl-dt-calibration-validation
+#| tbl-cap: "Digital-twin calibration and validation ladder"
+#| echo: false
+
+dt <- read.csv("tables/table_dt_06_calibration_validation_ladder.csv", check.names = FALSE, encoding = "UTF-8")
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

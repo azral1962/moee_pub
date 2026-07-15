@@ -1,0 +1,9 @@
+Symbol,Meaning,Unit,Range,Example
+I_i(t),Mission intensity of stakeholder i,Fraction,"[0,1]",0.75
+C_i,Mission capacity of stakeholder i,Output per time,"[0,infinity)",100 meals/hour
+rho_i,Stakeholder MIG-reasoning mode,Category,"Historical probabilistic agent or hybrid",Probabilistic
+kappa,Ecosystem MIG-setup mode,Category,"Independent smart contract or adaptive cooperative",Adaptive cooperative
+theta_i,Reasoner parameters,Mode-specific,Calibrated,Historical window or agent policy
+w_iF,Fixed/historical hybrid weight,Fraction,"[0,1]",0.3
+w_iP,Probabilistic hybrid weight,Fraction,"[0,1]",0.2
+w_iA,Agent-reasoning hybrid weight,Fraction,"[0,1]",0.5

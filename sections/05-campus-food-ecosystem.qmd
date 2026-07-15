@@ -1,0 +1,18 @@
+# Campus Food Service Ecosystem
+
+The reference ecosystem contains four functional stakeholder classes:
+
+1. **User stakeholders** consume or benefit from ecosystem outputs; in the campus case, students are the primary users.
+2. **Source stakeholders** provide resources and outputs; these include vendors, producers, and suppliers.
+3. **Regulator stakeholders** define or enforce policies, safety requirements, sustainability targets, and participation constraints; these include university administration and public regulators.
+4. **Operator stakeholders** enable, schedule, and settle ecosystem activity; these include campus service operators, delivery services, and digital-platform operators.
+
+A real organization may occupy more than one class, but each simulated role has explicit missions, a MIG, VOMR accounts, and PSKVE exchange interfaces. The baseline model validates that these elements form a functioning ecosystem and produce an observable wealth-creation cycle before coordination benefits are attributed to SOTA or TISE control.
+
+![Figure 3. Stakeholders and PSKVE exchanges in the campus food ecosystem.](/figures/generated/f_03.png){#fig-ecosystem}
+
+{{< include /tables/table04_stakeholders.qmd >}}
+
+{{< include /tables/table05_pskve.qmd >}}
+
+{{< include /tables/table08_dependency.qmd >}}

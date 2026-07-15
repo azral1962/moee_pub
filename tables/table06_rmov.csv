@@ -1,0 +1,5 @@
+Account,Symbol,Meaning,Representative update
+Value,V,Realized financial and systemic value,"Delta V = Revenue - Cost"
+Output,O,Products services or other mission results,"O(t) = f(R(t), C, E(t)) I(t)"
+Mission,M,Goals requirements and scheduled intensity,"M(t) represented by I(t) in [0,1]"
+Resources,R,Consumed or committed transformation inputs,"R(t+1) = R(t) + inflow - use"

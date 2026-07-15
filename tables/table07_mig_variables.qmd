@@ -1,0 +1,18 @@
+```{r}
+#| label: tbl-mig_variables
+#| tbl-cap: "Mission intensity and stakeholder reasoning variables"
+#| tbl.env: tabular
+#| fig-pos: h
+#| echo: false
+
+options(knitr.table.format = function() {
+  if (knitr::is_latex_output()) "latex" else "pandoc"
+})
+
+csv_candidates <- c("tables/table_07_mission_intensity_graph_variables.csv", "../tables/table_07_mission_intensity_graph_variables.csv", "table_07_mission_intensity_graph_variables.csv")
+csv_file <- csv_candidates[file.exists(csv_candidates)][1]
+if (is.na(csv_file)) stop("Cannot find table_07_mission_intensity_graph_variables.csv")
+dt <- read.csv(csv_file, check.names = FALSE, encoding = "UTF-8")
+
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

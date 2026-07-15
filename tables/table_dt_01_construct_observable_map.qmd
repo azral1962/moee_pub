@@ -1,0 +1,8 @@
+```{r}
+#| label: tbl-dt-construct-observable
+#| tbl-cap: "Digital-twin construct-to-observable map"
+#| echo: false
+
+dt <- read.csv("tables/table_dt_01_construct_observable_map.csv", check.names = FALSE, encoding = "UTF-8")
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

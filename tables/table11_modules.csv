@@ -1,0 +1,9 @@
+Module,Purpose,Input,Output,Implementation
+Stakeholder and VOMR,Maintain mission capacity state and accounts,"Resources capacity environment and schedule","Outputs and account changes",simulation/models.py
+MIG Reasoners,Create stakeholder MIG proposals,"Mission observations history beliefs resources and capacity","Historical probabilistic agent or hybrid proposal",simulation/reasoning.py
+Provider Adapters,Supply agentic JSON decisions,"System prompt state and decision schema","Validated provider-neutral decision object",simulation/providers.py
+MIG Coordinators,Commit or coordinate proposals,"MIG proposals setup policies and ecosystem state","Independent contracted or adaptive MIGs",simulation/coordination.py
+Triune Intelligence,Represent three intelligence channels,"Human/Natural Crowd/Cultural/Collective and Artificial signals","Evidence supplied to PUDAL",simulation/models.py
+Triple Markets,Discover asset liquidity and R-O signals,"Demand disruption and market state","Price and availability multipliers",simulation/markets.py
+PSKVE Exchange Engine,Execute resource-to-output transformations,"Coordinated MIG VOMR and market signals","Outputs value changes and mission achievement",simulation/exchange.py
+Simulation Engine,Advance scenarios and record experiments,"Stakeholders markets coordinator and disturbances","Step records summaries and CSV",simulation/engine.py

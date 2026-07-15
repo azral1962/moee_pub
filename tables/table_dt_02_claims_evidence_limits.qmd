@@ -1,0 +1,8 @@
+```{r}
+#| label: tbl-dt-claims-evidence
+#| tbl-cap: "Digital-twin claims, supporting evidence, and limits"
+#| echo: false
+
+dt <- read.csv("tables/table_dt_02_claims_evidence_limits.csv", check.names = FALSE, encoding = "UTF-8")
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

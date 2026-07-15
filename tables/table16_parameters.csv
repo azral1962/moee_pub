@@ -1,0 +1,8 @@
+Parameter,Symbol,Default,Unit,Calibration source
+Historical window,L_i,30,Time steps,Observed stakeholder MIG history
+Probabilistic dispersion,sigma_i,Scenario-specific,Intensity,Residuals from historical calibration
+Agent planning horizon,h_i,24,Time steps,Stakeholder decision horizon
+Fixed/historical weight,w_iF,Mode-specific,Fraction,Validation or calibration data
+Probabilistic weight,w_iP,Mode-specific,Fraction,Validation or calibration data
+Agent-reasoning weight,w_iA,Mode-specific,Fraction,Validation or calibration data
+Monte Carlo repetitions,N,100,Runs,Precision and convergence analysis

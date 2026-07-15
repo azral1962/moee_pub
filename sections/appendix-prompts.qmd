@@ -1,0 +1,3 @@
+# Appendix: Prompt Library
+
+The prompt files in `prompts/` contain reusable instructions for generating manuscript sections, black-and-white academic figures, and publication-quality tables.

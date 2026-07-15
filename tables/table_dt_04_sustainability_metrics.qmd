@@ -1,0 +1,8 @@
+```{r}
+#| label: tbl-dt-sustainability
+#| tbl-cap: "Digital-twin sustainability metric specification"
+#| echo: false
+
+dt <- read.csv("tables/table_dt_04_sustainability_metrics.csv", check.names = FALSE, encoding = "UTF-8")
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

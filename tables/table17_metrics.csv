@@ -1,0 +1,8 @@
+Metric,Formula,Unit,Direction,Interpretation
+Existence validation rate,Valid required entities / Required entities,Proportion,Higher,"Completeness of stakeholders missions MIGs and VOMR accounts"
+Mission achievement,Achieved mission output / Target mission output,Proportion,Higher,Operational fulfillment
+Net value creation,Revenue - resource cost,Currency,Higher,Realized VOMR value change
+Ecosystem wealth change,Sum of stakeholder value changes plus mission adjustment,Index or currency,Higher,Systemic financial and nonfinancial creation
+Performance retention,Disrupted performance / Normal performance,Proportion,Higher,Shock absorption
+Recovery time,Time to return to recovery threshold,Time,Lower,Speed of recovery
+Cumulative disruption loss,Sum of normal minus disrupted performance,Index-time,Lower,Total shock consequence

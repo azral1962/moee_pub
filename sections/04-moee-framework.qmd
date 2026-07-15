@@ -1,0 +1,100 @@
+# TISE Engineering Architecture
+
+TISE stands for **Triune-Intelligence Smart Engineering**. Its Smart Engineering component produces the **PSKVE Exchange Engine**, which represents and executes exchanges of **Products, Services, Knowledge, Values, and Environment**. This multidimensional model recognizes that ecosystem utility extends beyond goods and money. The Environment category includes the physical, institutional, digital, and ecological conditions that enable or constrain mission-asset operation.
+
+The **PUDAL Engine** closes the control loop around the PSKVE Exchange Engine. It perceives system state and anomalies, interprets stakeholder requirements and dependencies, recommends or updates coordinated MIGs, and learns from observed outcomes. Its control decisions are driven by Triune Intelligence rather than by artificial intelligence alone.
+
+## Triune Intelligence
+
+Triune Intelligence integrates three distinct but interacting intelligence channels:
+
+1. **Human/Natural Intelligence (HNI):** human expertise, ethical judgment, lived experience, and principles or patterns learned from natural systems.
+2. **Crowd/Cultural/Collective Intelligence (CCI):** stakeholder participation, community knowledge, cultural norms, institutional memory, and emergent group coordination.
+3. **Artificial Intelligence (AI):** data-driven sensing, forecasting, anomaly detection, recommendation, simulation, and optimization.
+
+Let the intelligence state supplied to PUDAL be
+
+$$
+\mathcal{T}(t) = \left[HNI(t), CCI(t), AI(t)\right].
+$$
+
+The PUDAL control action can then be represented as
+
+$$
+u(t) = \pi_{\mathrm{PUDAL}}\!\left(x(t),\mathcal{T}(t),\mathcal{P}(t)\right),
+$$
+
+where $x(t)$ is the observed ecosystem state and $\mathcal{P}(t)$ contains negotiated mission requirements, policies, and constraints. The action $u(t)$ configures MIGs and PSKVE exchange rules. Feedback from executed exchanges updates both the ecosystem state and the evidence available to the three intelligence channels.
+
+## Smart Engineering and PSKVE Exchange
+
+Smart Engineering converts mission requirements and system knowledge into an operable PSKVE Exchange Engine. PUDAL controls this engine by selecting feasible exchange policies and mission intensities. When demand, supply, liquidity, or environmental conditions change, PUDAL can adjust mission intensity and exchange policies rather than allowing a local disruption to propagate unchecked through the ecosystem.
+
+For a set of stakeholder MIGs $\mathbf{I}(t) = [I_1(t),\ldots,I_n(t)]^\top$, the PUDAL Engine solves a constrained coordination problem of the form
+
+$$
+\mathbf{I}^{*} = \arg\max_{\mathbf{I}} \; \mathbb{E}\!\left[\sum_{t=0}^{T} EVI(t)\right]
+$$
+
+subject to $0 \le I_i(t) \le 1$, stakeholder capacity and resource constraints, mission dependencies, market-clearing rules, and minimum participation requirements. This formulation makes resilience a property of adaptive configuration rather than spare capacity alone.
+
+## Stakeholder MIG Reasoning
+
+MIG creation remains a stakeholder function. Each stakeholder $i$ generates a proposed intensity trajectory from its mission, observations, resources, capacity, and reasoning mode:
+
+$$
+\widehat{I}_i(t) = G_i\!\left(M_i, x_i(t), R_i(t), C_i; \rho_i, \theta_i\right),
+$$
+
+where $\rho_i$ identifies the reasoning mode and $\theta_i$ contains its calibrated parameters. Three modes are supported:
+
+1. **Fixed/historical reasoning** uses a deterministic rule, expert-defined schedule, or replay or aggregate of historical MIG observations. It provides a transparent and reproducible reference.
+2. **Probabilistic reasoning** represents uncertainty explicitly by sampling or estimating $I_i(t)$ from a conditional distribution, such as $p(I_i(t) \mid x_i(t), \mathcal{H}_i)$, where $\mathcal{H}_i$ is stakeholder history. Monte Carlo runs then quantify the distribution of mission and wealth outcomes.
+3. **Agent reasoning** lets an autonomous stakeholder agent construct or revise its MIG from goals, beliefs, observations, memory, constraints, and expected consequences. The implementation may use rule-based, belief-desire-intention, planning, reinforcement-learning, or language-model-based reasoning, provided its decisions remain auditable. Agent reasoning describes decision autonomy and is not synonymous with Artificial Intelligence; an agent may draw on any appropriate combination of Triune Intelligence sources.
+
+The modes may be used independently or combined. A hybrid proposal can be written as
+
+$$
+\widehat{I}_i(t) = \operatorname{clip}_{[0,1]}\!\left(
+w_{iF} I_{iF}(t) + w_{iP} I_{iP}(t) + w_{iA} I_{iA}(t)
+\right),
+\qquad
+w_{iF}+w_{iP}+w_{iA}=1.
+$$
+
+PUDAL does not erase this stakeholder reasoning. It evaluates stakeholder MIG proposals against negotiated policies and ecosystem constraints, then accepts them, recommends revisions, or coordinates them with other stakeholders. In SOTA, those coordination rules are fixed and prenegotiated; in TISE, Triune Intelligence allows the rules and recommendations to adapt to changing conditions.
+
+## Stakeholder MIG Setup and Coordination
+
+The reasoning mode answers **how a stakeholder creates a MIG proposal**. A separate setup mode answers **how stakeholder proposals are committed and coordinated across the ecosystem**. Let $\widehat{\mathbf{I}}(t)$ be the vector of stakeholder-created proposals and let $\kappa$ denote one of three setup modes:
+
+1. **Independent setup:** each stakeholder commits its own MIG without cross-stakeholder negotiation, so $I_i(t)=\widehat{I}_i(t)$. This is the baseline configuration.
+2. **Prenegotiated smart contract:** stakeholders negotiate commitments, constraints, an objective function, and a fixed coordination rule before execution. A smart contract then applies and enforces that agreement during the run. This is the SOTA configuration.
+3. **Adaptive cooperative setup:** stakeholders cooperate through the PUDAL Engine, which uses Triune Intelligence and current ecosystem feedback to recommend coordinated revisions during execution. This is the TISE configuration.
+
+The realized MIG vector is therefore
+
+$$
+\mathbf{I}(t)=
+\mathcal{C}_{\kappa}\!\left(
+\widehat{\mathbf{I}}(t),x(t),\mathcal{P}(t),\mathcal{T}(t)
+\right),
+$$
+
+where $\mathcal{C}_{\kappa}$ is the selected coordination operator. For independent setup it is the identity operator; for smart-contract setup it is fixed by the prenegotiated agreement; and for adaptive cooperative setup it is updated through PUDAL subject to stakeholder consent, policies, and feasibility constraints. Separating $\rho$ (reasoning) from $\kappa$ (setup) permits, for example, probabilistic stakeholder reasoning under either independent, smart-contract, or adaptive cooperative coordination.
+
+![Figure 4. Mission Intensity Graphs of multiple stakeholders.](/figures/generated/f_04.png){#fig-mig}
+
+{{< include /tables/table07_mig_variables.qmd >}}
+
+## VOMR Accounting View and Transformation Flow
+
+![Figure 5. VOMR accounting view of the Resource–Mission–Output–Value transformation.](/figures/generated/f_05.png){#fig-rmov}
+
+{{< include /tables/table06_rmov.qmd >}}
+
+## PUDAL Control of the PSKVE Exchange Engine
+
+![Figure 6. Triune Intelligence drives the PUDAL control loop governing the PSKVE Exchange Engine.](/figures/generated/f_06.png){#fig-pudal}
+
+{{< include /tables/table09_pudal.qmd >}}

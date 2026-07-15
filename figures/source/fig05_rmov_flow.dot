@@ -1,0 +1,6 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white"];
+  node [shape=box, color="black", fontname="Helvetica"];
+  edge [color="black"];
+  Resources -> Mission -> Outputs -> Value -> Resources;
+}

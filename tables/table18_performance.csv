@@ -1,0 +1,7 @@
+Metric,Baseline,SOTA,TISE,Comparison,Significance
+Existence validation rate,TBD,TBD,TBD,"All models must pass",TBD
+Mission achievement,TBD,TBD,TBD,"SOTA vs baseline; TISE vs best SOTA",TBD
+Net value creation,TBD,TBD,TBD,"SOTA vs baseline; TISE vs best SOTA",TBD
+Ecosystem wealth change,TBD,TBD,TBD,"SOTA vs baseline; TISE vs best SOTA",TBD
+Performance retention,TBD,TBD,TBD,"TISE vs baseline and best SOTA",TBD
+Recovery time,TBD,TBD,TBD,"TISE vs baseline and best SOTA",TBD

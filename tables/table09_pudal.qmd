@@ -1,0 +1,18 @@
+```{r}
+#| label: tbl-pudal
+#| tbl-cap: "Pudal"
+#| tbl.env: tabular
+#| fig-pos: h
+#| echo: false
+
+options(knitr.table.format = function() {
+  if (knitr::is_latex_output()) "latex" else "pandoc"
+})
+
+csv_candidates <- c("tables/table_09_pudal_stages.csv", "../tables/table_09_pudal_stages.csv", "table_09_pudal_stages.csv")
+csv_file <- csv_candidates[file.exists(csv_candidates)][1]
+if (is.na(csv_file)) stop("Cannot find table_09_pudal_stages.csv")
+dt <- read.csv(csv_file, check.names = FALSE, encoding = "UTF-8")
+
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

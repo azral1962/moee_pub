@@ -1,0 +1,37 @@
+# Introduction
+
+The shift toward mission-oriented economies requires a common architecture for engineering design, distributed intelligence, and financial management. Conventional linear models are useful for describing isolated input-output transformations, but they do not fully represent value co-creation among autonomous stakeholders whose timing, capacity, knowledge, and objectives are interdependent. **Triune-Intelligence Smart Engineering (TISE)** addresses this gap within Mission-Oriented Ecosystem Engineering (MOEE). Smart Engineering produces a PSKVE Exchange Engine, while Triune Intelligence drives the PUDAL Engine that controls those exchanges. Stakeholders remain autonomous, but their requirements, objective functions, exchange rules, timing, and scale can be coordinated around a shared mission.
+
+Triune Intelligence combines three complementary sources: (1) **Human/Natural Intelligence**, including human judgment and knowledge derived from natural systems; (2) **Crowd/Cultural/Collective Intelligence**, including shared practices, institutional memory, and group coordination; and (3) **Artificial Intelligence**, including computational perception, prediction, recommendation, and optimization. TISE treats none of these sources as sufficient alone. PUDAL integrates their signals into accountable control decisions for the PSKVE Exchange Engine.
+
+Campus food service is a small but complete example of such an ecosystem. It contains users, producers, suppliers, operators, regulators, physical resources, digital services, money flows, knowledge flows, environmental effects, and institutional missions. This makes it an appropriate reference system for developing and testing TISE through a Digital Twin Mini-Lab.
+
+For stakeholder (i), a Mission Intensity Graph (MIG) is a time-indexed function
+
+$$
+I_i(t) \in [0,1], \qquad t \in [0,T],
+$$
+
+where (I_i(t)) is the fraction of mission capacity (C_i) scheduled for use at time (t) over planning horizon (T). Mission output is
+
+$$
+O_i(t) = f_i\!\left(R_i(t),C_i,E_i(t)\right) I_i(t),
+$$
+
+where (R_i(t)) denotes available resources and (E_i(t)) denotes the environmental conditions needed to operate mission assets. Thus, a stakeholder creates output by converting resources according to its MIG, subject to both capacity and environmental feasibility.
+
+The paper compares three generations of ecosystem operation.
+
+![Figure 1. Evolution from decentralized operation to digital platforms and mission-oriented ecosystem engineering.](/figures/generated/f_01.png){#fig-evolution}
+
+{{< include /tables/table01_generations.qmd >}}
+
+The three configurations have different validation purposes. The **baseline** establishes the existence and operational coherence of the ecosystem: user, source, regulator, and operator stakeholders; their missions and MIGs; their VOMR accounts; and the resulting wealth-creation cycle. Stakeholders execute independent MIGs, providing the reference trajectory against which coordinated models are evaluated.
+
+The **state-of-the-art (SOTA)** configuration demonstrates the existence and operation of the PSKVE Exchange Engine under a prenegotiated smart contract. The contract encodes a fixed PUDAL-derived coordination policy, commitments, and objective function selected before a run; these remain fixed during execution. Comparing alternative contracts and objective functions tests whether engineered PSKVE coordination creates more value or wealth than the baseline, without yet claiming adaptive intelligence.
+
+The **TISE** configuration adds adaptive cooperative coordination driven by Triune Intelligence. Human/Natural, Crowd/Cultural/Collective, and Artificial Intelligence signals allow the PUDAL Engine to facilitate revisions to stakeholder MIGs and exchange controls as conditions change. Cooperation remains subject to negotiated stakeholder constraints and participation. TISE is therefore evaluated not only by its value and wealth creation under normal conditions, but also by its ability to maintain mission performance, absorb shocks, recover, and reconfigure under disruptive scenarios.
+
+## Contributions
+
+This paper contributes: (1) TISE as an architecture connecting Triune Intelligence and Smart Engineering; (2) a PSKVE Exchange Engine controlled by a Triune-Intelligence-driven PUDAL Engine; (3) a mathematical representation of mission execution using MIGs; (4) a Triple-Market Architecture that connects asset capitalization, liquidity, and operations; (5) VOMR accounting for systemic wealth; and (6) a Digital Twin Mini-Lab for scenario-based stress testing and controller selection.

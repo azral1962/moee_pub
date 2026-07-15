@@ -1,0 +1,234 @@
+# Appendix: Writing a Dissertation from the MOEE Case
+
+## Purpose and scope
+
+This guide explains how to develop a dissertation from the Mission-Oriented Ecosystem Engineering (MOEE) campus-food case, its Triune-Intelligence Smart Engineering (TISE) architecture, and the Digital Twin Mini-Lab results. The repository uses **MOEE** as the framework name. If **MMOE** denotes a different concept in the degree program, define it separately and use the two terms consistently.
+
+The dissertation should not be an expanded description of the simulator. It should present a defensible research argument:
+
+> A clearly identified limitation in the coordination of mission-oriented ecosystems motivates a formal method; the campus-food case operationalizes that method; and matched experiments provide bounded evidence about its effects, mechanisms, limitations, and transferability.
+
+The current files in `results/` are useful for learning the evidence pipeline and checking that the model operates. They are not, by themselves, sufficient evidence for a dissertation claim. Dissertation-grade conclusions require a frozen protocol, repeated matched runs, uncertainty estimates, sensitivity and ablation analyses, and credible validation of model assumptions.
+
+## Decide what the dissertation contributes
+
+Choose one primary contribution and treat the others as supporting contributions. A suitable default for this case is a **methodological dissertation**: MOEE/TISE is the proposed method, the campus-food ecosystem is the principal case, and the Digital Twin Mini-Lab is the evaluation instrument.
+
+| Contribution type | Central question | Evidence required in this case |
+|---|---|---|
+| Theory or framework | What concepts and relationships represent mission-oriented value co-creation? | Defined constructs, propositions, boundary conditions, and comparison with prior theory |
+| Engineering method | How should stakeholder missions and PSKVE exchanges be coordinated? | Formal problem, PUDAL algorithm, constraints, pseudocode, and ablations |
+| Digital-twin artifact | Can the proposed concepts be implemented coherently and reproducibly? | Architecture, verification tests, parameter provenance, traceable code, and reproducible runs |
+| Empirical comparison | Under which conditions does adaptive coordination outperform fixed coordination? | Matched baseline--SOTA--TISE experiments, effect sizes, uncertainty, and failure cases |
+| Design knowledge | Which principles transfer to other mission-oriented ecosystems? | Cross-case mapping, mechanism-based reasoning, and explicit limits to transfer |
+
+A contribution should be removed or narrowed when no chapter supplies direct evidence for it. In particular, a simulation can demonstrate the consequences of encoded assumptions; it cannot establish that those assumptions describe the real campus without calibration or external validation.
+
+## Build the argument before writing chapters
+
+### Dissertation proposition
+
+Start with a provisional proposition and revise it after the final analysis:
+
+> For a bounded campus-food ecosystem under specified normal and disruptive conditions, adaptive PUDAL coordination of stakeholder Mission Intensity Graphs improves mission achievement and resilience relative to independent and prenegotiated fixed-contract coordination, subject to declared resource, safety, equity, and governance constraints.
+
+Every phrase creates an obligation. "Improves" requires a magnitude and uncertainty; "resilience" requires disruption, retention, loss, and recovery measures; "relative to" requires fair comparators; and "subject to" requires reported constraint checks. If the results do not support the proposition, report the boundary or negative finding and narrow the proposition rather than selecting only favorable runs.
+
+### Research questions
+
+The following sequence separates artifact validity, comparative performance, mechanism, robustness, and transfer:
+
+- **RQ1 -- Representation:** Can MOEE represent the stakeholders, missions, PSKVE exchanges, MIGs, VOMR accounts, markets, and constraints of the campus-food ecosystem coherently?
+- **RQ2 -- Normal operation:** How does adaptive TISE coordination affect ecosystem and stakeholder-level mission achievement and value creation under normal conditions compared with baseline and the strongest fixed SOTA contract?
+- **RQ3 -- Resilience:** How do the architectures differ in performance retention, cumulative loss, recovery time, and constraint violations across disruption types, severities, and durations?
+- **RQ4 -- Mechanism and robustness:** Which elements of TISE cause the observed changes, and how sensitive are the findings to reasoning modes, objective weights, parameters, random seeds, and information availability?
+- **RQ5 -- Transfer:** Which constructs and mechanisms can reasonably transfer to another mission-oriented ecosystem, and which findings remain specific to the campus-food case?
+
+RQ1 is answered mainly by formalization, traceability, and verification. RQ2--RQ4 require experiments. RQ5 requires a disciplined cross-case argument and, ideally, a second demonstrator or expert assessment. Do not answer all five from the same performance table.
+
+### Claim--evidence matrix
+
+Create and maintain this matrix while writing:
+
+| Claim | Required artifact or analysis | Main chapter | Permitted conclusion |
+|---|---|---|---|
+| The case is representable in MOEE | Stakeholder registry, mission definitions, PSKVE map, MIGs, VOMR equations, invariant tests | Case and model | The encoded case is internally coherent |
+| Fixed coordination changes outcomes | Matched baseline versus SOTA runs | Results | Effect of the tested contract under tested conditions |
+| Adaptation adds value | TISE versus strongest SOTA, with reasoner and information held constant | Results | Incremental effect attributable to adaptive coordination |
+| TISE is more resilient | Multi-disruption retention, loss, and recovery analysis | Results | Resilience under the tested disruption envelope |
+| Benefits are acceptable | Stakeholder distributions, equity and constraint checks | Results and discussion | Aggregate gains do not conceal specified unacceptable harms |
+| The approach can transfer | Construct-by-construct mapping and second-case evidence | Generalization | Analytical transfer, not universal effectiveness |
+
+## Recommended dissertation structure
+
+Adapt chapter names to the university template, but preserve the logic below.
+
+### Chapter 1: Introduction
+
+Move from the public need to the technical problem. Define the campus-food ecosystem only far enough to reveal the coordination difficulty. State the gap, aim, research questions, scope, contributions, and chapter map. Avoid reporting detailed results here until the analysis is final.
+
+A concise aim is:
+
+> To design and evaluate an adaptive engineering architecture for coordinating heterogeneous stakeholder missions and value exchanges in a bounded campus-food ecosystem under normal and disruptive conditions.
+
+### Chapter 2: Literature review and research gap
+
+Synthesize literature by problem and capability: mission-oriented systems, multi-stakeholder and multi-agent coordination, digital twins, smart contracts, value and sustainability accounting, resilience, and responsible AI governance. Compare approaches using criteria derived from the research questions. End with the exact missing capability the dissertation addresses; a missing keyword or citation is not itself a gap.
+
+### Chapter 3: Research methodology
+
+State the overall methodology, such as design science with simulation-based evaluation and case-informed model construction. Explain case selection, construct operationalization, data and parameter sources, artifact-development stages, experiment design, analysis methods, ethics, reproducibility, and validity strategy. Separate measured inputs, elicited judgments, calibrated parameters, and assumptions.
+
+### Chapter 4: Campus-food case and problem formulation
+
+Define the boundary, actors, decision rights, time horizon, PSKVE flows, missions, MIGs, VOMR accounts, normal operation, disruptions, hard constraints, and exclusions. Trace every important case statement to observation, stakeholder elicitation, institutional data, literature, or an explicitly labeled modeling assumption.
+
+### Chapter 5: MOEE/TISE artifact design
+
+Present the baseline, fixed SOTA contract, and adaptive TISE architecture. Specify the PUDAL control loop, objectives, state variables, information available at decision time, decision rules, constraint enforcement, fallback behavior, and computational procedure. Explain both how the artifact works and why its design addresses the gap.
+
+### Chapter 6: Digital Twin Mini-Lab and experimental protocol
+
+Describe implementation and verification separately from performance evaluation. Provide the scenario matrix, parameters, seeds, run count, stopping rules, comparators, ablations, metrics, and analysis plan. Use identical scenarios and random seeds for matched architecture comparisons. Freeze this protocol before inspecting the final outcome tables.
+
+### Chapter 7: Results
+
+Organize by RQ, not by source file or software module. A useful order is model verification, normal-condition comparison, disruption and recovery, stakeholder distribution, ablation, sensitivity, failure cases, and computational performance. Each subsection should open with a direct evidence-based answer, then report magnitude, uncertainty, and exceptions.
+
+### Chapter 8: Discussion
+
+Explain why the observed changes occurred, relate them to theory and prior work, distinguish statistical from practical importance, examine stakeholder tradeoffs, and discuss alternative explanations. Address construct, internal, external, and conclusion validity. State what was not demonstrated.
+
+### Chapter 9: Generalization, design principles, and implications
+
+Extract mechanism-based design principles from the case and test the mapping to at least one contrasting domain. Separate transfer of the representation, transfer of the method, and transfer of performance. The existing elderly services, education, health care, transportation, and home-business mappings can motivate this analysis, but a mapping alone is weaker than a second executable case or expert validation.
+
+### Chapter 10: Conclusion
+
+Answer each RQ briefly, list the contributions that were actually demonstrated, state the principal limitations, and identify the next empirical step. Introduce no new evidence.
+
+## Turn the existing MOEE outputs into dissertation evidence
+
+The `course_lab02_*.csv` files contain 24 steps for four stakeholder roles under a shared probabilistic reasoner and seed 42. As an **illustrative single-run reading**, their mean row-level mission achievement is approximately 0.8437 for baseline, 0.8565 for SOTA, and 0.9066 for TISE; final aggregate stakeholder value is approximately 2469.11, 2544.31, and 2673.66, respectively. These values show how to write an observation, but they do not establish a population effect, robustness, causality across all design differences, or real-world effectiveness.
+
+A defensible draft sentence is:
+
+> In the seed-42 demonstration run, mean step-by-stakeholder mission achievement was higher under TISE (0.9066) than under SOTA (0.8565) and baseline operation (0.8437). This run is a pipeline check; repeated matched experiments are required before interpreting the differences as robust architecture effects.
+
+Do not write "TISE is proven superior." The current run mixes normal and disruptive steps, supplies no across-seed uncertainty, and does not show whether gains are equitably distributed. It should be used to debug definitions, analysis code, and presentation before generating the frozen result set.
+
+### Dissertation-grade experiment matrix
+
+At minimum, cross the following factors:
+
+| Factor | Minimum levels |
+|---|---|
+| Architecture | Baseline, fixed SOTA, adaptive TISE |
+| MIG reasoning | Historical, probabilistic, agentic, hybrid |
+| Operating condition | Normal plus named disruptions |
+| Disruption profile | Multiple severities and durations |
+| Fixed objective | Value, mission, equity, sustainability, resilience |
+| Randomness | A declared set of matched seeds |
+| Component state | Full TISE plus one-component-at-a-time ablations |
+
+First compare architectures with the reasoning mode, information, parameters, constraints, and seed held constant. Then study interactions. Comparing a historical baseline with an agentic TISE run cannot isolate the effect of PUDAL coordination.
+
+### Measures and units of analysis
+
+Declare one primary outcome before final analysis. Recommended outcomes include:
+
+- mission achievement at ecosystem and stakeholder levels;
+- value creation and final VOMR balances;
+- performance retention during disruption;
+- cumulative disruption loss and recovery time;
+- constraint violations and unsafe states;
+- equity or worst-stakeholder performance; and
+- computation time, provider failures, and fallback frequency.
+
+Distinguish a simulation run, time step, and stakeholder observation. Rows within one run share state and are not automatically independent samples. Summarize each run first, then compare matched run-level outcomes across seeds and scenarios. Report the estimator, dispersion or confidence interval, absolute and relative effect, missing or failed runs, and a justified statistical procedure.
+
+### Reproducible evidence chain
+
+Maintain this chain for every number in the dissertation:
+
+```text
+case source or assumption -> parameter registry -> frozen configuration
+-> versioned simulation run -> immutable raw CSV -> analysis script
+-> generated table or figure -> claim in a named dissertation section
+```
+
+Store a run manifest with the commit identifier, timestamp, command, environment, seed, model and provider identifiers, prompt version, configuration hash, failures, and fallbacks. Generate reported tables and figures from scripts rather than copying values by hand.
+
+## How to write the Results chapter
+
+Use a four-part paragraph pattern:
+
+1. **Answer:** State the result for the RQ in one sentence.
+2. **Evidence:** Give the comparator, sample, estimate, interval, and figure or table reference.
+3. **Distribution or exception:** Report stakeholder differences, worst cases, or scenarios in which the pattern changes.
+4. **Boundary:** State what the result supports without explaining the broader meaning yet.
+
+Template:
+
+> Across **[number]** matched seeds in **[scenario]**, TISE changed **[primary metric]** from **[SOTA estimate]** to **[TISE estimate]**, an absolute difference of **[effect]** with **[uncertainty interval]**. The effect was **[consistent/inconsistent]** across **[stakeholders or severities]**, with **[important exception]**. This result supports **[bounded answer to the RQ]** under the tested configuration.
+
+Keep interpretation in the Discussion. A result is what the analysis shows; a mechanism is an explanation that requires ablation, trace data, or other evidence.
+
+## How to write the Discussion chapter
+
+For each RQ, use this sequence:
+
+- restate the principal finding without repeating the whole table;
+- explain the proposed mechanism and cite diagnostic or ablation evidence;
+- compare agreement or disagreement with prior work;
+- discuss practical size, stakeholder tradeoffs, and governance implications;
+- give the strongest plausible alternative explanation; and
+- state the boundary of generalization.
+
+Treat negative and mixed results as research findings. For example, adaptive coordination may improve aggregate mission achievement while reducing one stakeholder's value balance, or it may perform well under supply shocks but poorly under demand shocks. Such boundaries can yield stronger design knowledge than an unqualified average gain.
+
+## Validity and responsible-use requirements
+
+Address at least the following:
+
+| Validity area | Question for the MOEE case | Suitable response |
+|---|---|---|
+| Construct | Do mission achievement and VOMR measures represent what stakeholders value? | Stakeholder review, triangulation, alternative metrics |
+| Internal | Is the difference caused by coordination rather than unequal reasoners or information? | Matched designs, ablations, common seeds, trace inspection |
+| External | Does a stylized campus model represent other campuses or sectors? | Parameter ranges, contrasting case, explicit transfer boundaries |
+| Conclusion | Are run counts, estimators, and uncertainty adequate? | Power or precision rationale, robust summaries, sensitivity analysis |
+| Artifact | Does the implementation match the formal method? | Unit, invariant, replay, and integration tests |
+
+If human participants provide mission weights, judgments, or evaluations, obtain the required ethics approval or exemption before data collection and describe consent, privacy, retention, and access controls. If an external AI model contributes decisions, record its version and prompts, test failure and bias modes, prevent unavailable future information from entering decisions, and preserve a human-authorized fallback for consequential actions.
+
+## Practical writing sequence
+
+Write in evidence order rather than chapter order:
+
+1. Freeze the boundary, RQs, primary metric, comparators, and protocol.
+2. Verify the artifact and generate the complete raw result set.
+3. Build analysis scripts, tables, figures, and a claim--evidence matrix.
+4. Draft Chapters 6 and 7 from the frozen evidence.
+5. Draft Chapters 4 and 5 so the experiment is reproducible.
+6. Draft Chapters 8 and 9 to interpret and bound the findings.
+7. Complete Chapters 2 and 3 around the demonstrated gap and method.
+8. Write Chapter 1, Chapter 10, the abstract, and the title last.
+9. Audit every quantitative claim back to raw data and every factual claim back to a source.
+10. Perform separate reviews for argument, method, reproducibility, language, formatting, and institutional compliance.
+
+## Dissertation readiness checklist
+
+Before submission, confirm that:
+
+- each RQ has a direct answer and a named evidence artifact;
+- the strongest credible SOTA configuration is used as the primary comparator;
+- architecture comparisons use matched information, parameters, constraints, scenarios, and seeds;
+- all parameters have units and provenance or are labeled assumptions;
+- uncertainty, stakeholder distributions, failures, and negative results are reported;
+- ablation and sensitivity analyses support claims about mechanism and robustness;
+- every table and figure can be regenerated from versioned raw data;
+- simulation claims are distinguished from campus and cross-domain claims;
+- ethical, data-governance, authorship, and AI-use requirements are satisfied; and
+- the title, abstract, contributions, results, discussion, and conclusion make the same bounded claim.
+
+The best dissertation produced from this case will not be the one that makes the largest claim. It will be the one whose chain from public need to formal method, executable artifact, controlled evidence, and carefully bounded conclusion is easiest to inspect and hardest to misunderstand.

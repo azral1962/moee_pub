@@ -1,0 +1,27 @@
+# Results
+
+This section will be populated from Mini-Lab runs. Results will be reported in three stages: (1) baseline existence and accounting validation, (2) SOTA PSKVE operation and fixed-objective comparisons, and (3) TISE value-creation and disruption-resilience comparisons. The figures and tables below define the target result artifacts; until simulation data are available, they should not be interpreted as empirical findings.
+
+![Figure 10. Comparison of baseline, SOTA platform, and TISE configurations.](/figures/generated/f_10.png){#fig-modelcomparison}
+
+![Figure 11. Independent versus PUDAL-synchronized Mission Intensity Graphs.](/figures/generated/f_11.png){#fig-sync}
+
+![Figure 12. Waste Reduction Score and raw waste comparison.](/figures/generated/f_12.png){#fig-waste}
+
+![Figure 13. Vendor financial and operational sustainability.](/figures/generated/f_13.png){#fig-vendor}
+
+![Figure 14. Student satisfaction dimensions.](/figures/generated/f_14.png){#fig-student}
+
+![Figure 15. Mission achievement dashboard.](/figures/generated/f_15.png){#fig-mission}
+
+![Figure 16. Ecosystem Value Index decomposition.](/figures/generated/f_16.png){#fig-evi}
+
+![Figure 17. Robustness of candidate MSRS policies.](/figures/generated/f_17.png){#fig-robustness}
+
+![Figure 18. Scenario performance heatmap.](/figures/generated/f_18.png){#fig-heatmap}
+
+{{< include /tables/table18_performance.qmd >}}
+
+{{< include /tables/table19_scenario_performance.qmd >}}
+
+{{< include /tables/table20_msrs_ranking.qmd >}}

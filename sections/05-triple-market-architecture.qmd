@@ -1,0 +1,33 @@
+# Triple-Market Financial Architecture
+
+Within TISE, the Triple-Market Architecture maps the PSKVE Exchange Engine to economic reality by separating three markets that perform different functions while exchanging consistent VOMR signals. The Triple-Market Architecture is therefore a financial subsystem of TISE, not the expansion of the TISE acronym.
+
+1. The **Stock Market** capitalizes fixed mission assets and records their ownership and long-term financing on the balance sheet.
+2. The **Financial Market** supplies liquidity, credit, and bonds for short-term operations and is reflected in cash-flow accounts.
+3. The **Resource–Output (R–O) Market** prices and clears the operational transformation of resources into outputs and is reflected in the income statement.
+
+This separation prevents an operational surplus from being confused with liquidity or asset appreciation. At the same time, PUDAL coordinates the three markets: asset capacity constrains feasible MIGs, liquidity constrains when missions can execute, and R–O market prices influence which transformations generate sustainable value.
+
+## VOMR Accounting and Systemic Wealth
+
+VOMR tracks Value, Output, Mission, and Resources for each stakeholder and for the ecosystem in aggregate. For stakeholder $i$, the realized change in the Value account over an accounting interval is
+
+$$
+\Delta V_i = \operatorname{Revenue}_i - \operatorname{Cost}_i,
+$$
+
+with
+
+$$
+\operatorname{Revenue}_i = \sum_{o \in \mathcal{O}_i} p_o O_{io},
+\qquad
+\operatorname{Cost}_i = \sum_{r \in \mathcal{R}_i} p_r R_{ir}.
+$$
+
+Here, $p_o$ and $p_r$ are transaction prices discovered in the relevant markets. The resulting $\Delta V_i$ is the realized financial margin of a transformation cycle, not the entirety of systemic wealth. TISE also retains mission achievement, nonfinancial PSKVE exchanges, externalities, resilience, and changes in mission-asset capacity in the Ecosystem Value Index. Aggregate systemic value can therefore be represented as
+
+$$
+\Delta V_{\mathrm{sys}} = \sum_{i \in \mathcal{I}} \Delta V_i + \Phi(\mathbf{z}),
+$$
+
+where $\Phi(\mathbf{z})$ converts agreed nonfinancial mission outcomes and externalities into a transparent system-level adjustment. Keeping $\Phi$ explicit prevents collective value from being silently equated with the sum of stakeholder profits.

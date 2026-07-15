@@ -1,0 +1,8 @@
+```{r}
+#| label: tbl-dt-online-update
+#| tbl-cap: "Governed online-update contract for digital-twin states and parameters"
+#| echo: false
+
+dt <- read.csv("tables/table_dt_03_online_update_contract.csv", check.names = FALSE, encoding = "UTF-8")
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

@@ -1,0 +1,18 @@
+```{r}
+#| label: tbl-utilities
+#| tbl-cap: "Utilities"
+#| tbl.env: tabular
+#| fig-pos: h
+#| echo: false
+
+options(knitr.table.format = function() {
+  if (knitr::is_latex_output()) "latex" else "pandoc"
+})
+
+csv_candidates <- c("tables/table_14_stakeholder_utility_functions.csv", "../tables/table_14_stakeholder_utility_functions.csv", "table_14_stakeholder_utility_functions.csv")
+csv_file <- csv_candidates[file.exists(csv_candidates)][1]
+if (is.na(csv_file)) stop("Cannot find table_14_stakeholder_utility_functions.csv")
+dt <- read.csv(csv_file, check.names = FALSE, encoding = "UTF-8")
+
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```

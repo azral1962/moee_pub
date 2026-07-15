@@ -1,0 +1,7 @@
+# Discussion
+
+The discussion will separate three levels of evidence. First, successful baseline execution establishes construct and accounting validity: the stakeholder classes, missions, independently established MIGs, VOMR accounts, and wealth-creation cycle can coexist and operate coherently. Second, improvement by SOTA over baseline supports the value of a PSKVE Exchange Engine coordinated through a prenegotiated smart contract encoding a fixed PUDAL-derived policy; comparisons among objective functions reveal which values the contract privileges. Third, improvement by adaptive cooperative TISE over the strongest SOTA contract—especially retention and recovery under disruption—supports the additional value of Triune-Intelligence-driven PUDAL coordination.
+
+This staged interpretation prevents ordinary coordination gains from being mislabeled as adaptive intelligence. It will also distinguish gains caused by operational timing from those caused by liquidity access, asset capacity, objective-function choice, or the explicit recognition of nonfinancial mission outcomes. TISE's central resilience claim should be assessed across multiple disruption types and severities rather than from normal-condition averages alone.
+
+{{< include /tables/table21_validity.qmd >}}

@@ -1,0 +1,12 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white"];
+  node [shape=box, style="", color="black", fontname="Helvetica"];
+  edge [color="black", fontname="Helvetica"];
+  Students -> Vendors [label="V"];
+  Vendors -> Students [label="P,S"];
+  Suppliers -> Vendors [label="P"];
+  Vendors -> Suppliers [label="V"];
+  University -> Operator [label="K,V"];
+  Operator -> Vendors [label="K"];
+  Regulator -> Vendors [label="Rules"];
+}

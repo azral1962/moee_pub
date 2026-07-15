@@ -1,0 +1,11 @@
+# Literature Review
+
+The work relates to three streams of literature: decentralized operations and supply chains, digital platforms and recommendation systems, and mission-oriented service ecosystems.
+
+![Figure 2. Three generations of research leading to MOEE.](/figures/generated/f_02.png){#fig-literature}
+
+{{< include /tables/table02_literature.qmd >}}
+
+{{< include /tables/table03_gap.qmd >}}
+
+The research gap is that current approaches either optimize local operations or digital transactions. They rarely engineer coordinated mission plans for multiple stakeholders while jointly considering financial, operational, social, environmental, and governance objectives.

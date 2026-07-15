@@ -1,0 +1,11 @@
+# Multi-Stakeholder Recommendation Systems
+
+The PUDAL controller operates an MSRS that generates a recommendation vector for all stakeholders.
+
+![Figure 7. Recommendation vectors produced by the PUDAL-controlled MSRS.](/figures/generated/f_07.png){#fig-msrs}
+
+{{< include /tables/table10_recommendation_vector.qmd >}}
+
+{{< include /tables/table13_msrs_policies.qmd >}}
+
+{{< include /tables/table14_utilities.qmd >}}

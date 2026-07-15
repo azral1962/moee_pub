@@ -1,0 +1,18 @@
+```{r}
+#| label: tbl-rmov
+#| tbl-cap: "VOMR accounts and representative update relations"
+#| tbl.env: tabular
+#| fig-pos: h
+#| echo: false
+
+options(knitr.table.format = function() {
+  if (knitr::is_latex_output()) "latex" else "pandoc"
+})
+
+csv_candidates <- c("tables/table_06_rmov_accounts.csv", "../tables/table_06_rmov_accounts.csv", "table_06_rmov_accounts.csv")
+csv_file <- csv_candidates[file.exists(csv_candidates)][1]
+if (is.na(csv_file)) stop("Cannot find table_06_rmov_accounts.csv")
+dt <- read.csv(csv_file, check.names = FALSE, encoding = "UTF-8")
+
+knitr::kable(dt, booktabs = TRUE, row.names = FALSE)
+```
