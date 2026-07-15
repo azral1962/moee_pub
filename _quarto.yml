@@ -9,7 +9,7 @@ book:
   chapters:
     - index.qmd
     - intro.qmd
-    - ../moee_research_project/body.qmd 
+    - body.qmd 
     - summary.qmd
     - references.qmd
 

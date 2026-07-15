@@ -1,0 +1,49 @@
+# Konsep
+
+{{< include sections/01-introduction.qmd >}}
+
+{{< include sections/02-literature-review.qmd >}}
+
+{{< include sections/03-problem-statement.qmd >}}
+
+{{< include sections/04-moee-framework.qmd >}}
+
+![Figure 5a. Detailed Resource–Mission–Output–Value transformation, measurement, and reinvestment flow.](figures/generated/f_05a.png){#fig-rmov-detail}
+
+{{< include sections/05-triple-market-architecture.qmd >}}
+
+{{< include sections/05-campus-food-ecosystem.qmd >}}
+
+{{< include sections/06-digital-twin-minilab.qmd >}}
+
+## Digital-Twin Specification Tables
+
+The following tables connect the Mini-Lab's theoretical constructs to observables, delimit the claims supported by the current evidence, and specify the online-update, sustainability, experimental-fairness, calibration, and validation contracts.
+
+{{< include tables/table_dt_01_construct_observable_map.qmd >}}
+
+{{< include tables/table_dt_02_claims_evidence_limits.qmd >}}
+
+{{< include tables/table_dt_03_online_update_contract.qmd >}}
+
+{{< include tables/table_dt_04_sustainability_metrics.qmd >}}
+
+{{< include tables/table_dt_05_experimental_design_fairness.qmd >}}
+
+{{< include tables/table_dt_06_calibration_validation_ladder.qmd >}}
+
+{{< include sections/07-msrs-policies.qmd >}}
+
+{{< include sections/08-experimental-design.qmd >}}
+
+{{< include sections/09-results-placeholders.qmd >}}
+
+{{< include sections/10-discussion.qmd >}}
+
+{{< include sections/11-generalization.qmd >}}
+
+{{< include sections/12-conclusion.qmd >}}
+
+{{< include sections/13-dissertation-guide.qmd >}}
+
+{{< include sections/appendix-prompts.qmd >}}
